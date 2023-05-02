@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 
+import UserProfile from "@/components/UserProfile";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
           reiciendis, eius nisi eligendi illo officia perspiciatis quam delectus
           dicta sed?
         </p>
+
+        <UserProfile />
       </div>
     </main>
   );
