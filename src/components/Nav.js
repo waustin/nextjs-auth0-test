@@ -14,6 +14,7 @@ export default function Nav() {
   }
   return (
     <nav className="flex items-center justify-end px-24 py-8 gap-4">
+      <Link href="/">Home</Link>
       {isUserLoggedIn() ? (
         <>
           <Link href="/profile">Profile</Link>
