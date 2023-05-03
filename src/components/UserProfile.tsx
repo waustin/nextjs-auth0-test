@@ -13,6 +13,14 @@ export default function UserProfile() {
     console.log("User", user);
   }
 
+  function handleSaveProfile() {
+    console.log("Saving profile...");
+  }
+
+  function handleUpdatePassword() {
+    console.log("Updating password...");
+  }
+
   return (
     <div className="userProfile">
       {user && (
@@ -24,7 +32,7 @@ export default function UserProfile() {
               </label>
               <input
                 type="text"
-                value={user.name}
+                defaultValue={user.name ?? ""}
                 className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -34,13 +42,16 @@ export default function UserProfile() {
               </label>
               <input
                 type="text"
-                value={user.email}
+                defaultValue={user.email ?? ""}
                 className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
             <div className="mt-0">
-              <button className="rounded-md bg-purple-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <button
+                onClick={handleSaveProfile}
+                className="rounded-md bg-purple-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
                 Save Profile
               </button>
             </div>
@@ -69,7 +80,10 @@ export default function UserProfile() {
                 />
               </div>
               <div className="mt-0">
-                <button className="rounded-md bg-purple-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                <button
+                  onClick={handleUpdatePassword}
+                  className="rounded-md bg-purple-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
                   Update Password
                 </button>
               </div>
