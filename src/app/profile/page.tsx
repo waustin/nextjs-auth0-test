@@ -8,6 +8,7 @@ const Profile = async () => {
     <div>
       <pre>{JSON.stringify(user)}</pre>
       <h1 className="mb-4 text-4xl">User Profile</h1>
+      <UserProfile />
     </div>
   );
 };
