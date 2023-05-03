@@ -23,9 +23,10 @@ export default function RootLayout({
       <UserProvider>
         <body className={inter.className}>
           <Nav />
-          <main className="flex min-h-screen flex-col items-center justify-between px-24 py-8">
-            {children}
-          </main>
+          <main className="flex min-h-screen px-24 py-8">{children}</main>
+          <footer className="bg-slate-400 w-full px-24 py-4 text-center">
+            <p className="text-sm">Footer</p>
+          </footer>
         </body>
       </UserProvider>
     </html>
